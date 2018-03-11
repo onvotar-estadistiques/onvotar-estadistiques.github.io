@@ -1,0 +1,64 @@
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+  
+.main-content {
+    max-width: 1080px;
+}
+
+.mdl-card__title.mdl-card__title {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#main-card .mdl-card__title {
+    min-height: 175px;
+    background-image: url('../img/urna.png');
+    background-position: 90% 65%;
+    background-repeat: no-repeat;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.province-path{
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+}
+.node {
+    cursor: pointer;
+}
+
+.node:hover {
+    stroke: #000;
+      stroke-width: 1.5px;
+}
+
+.node--leaf {
+    fill: white;
+}
+.counties {
+    fill: none;
+}
+
+.states {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+
+.label {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-anchor: middle;
+        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+    pointer-events: none;
+}
