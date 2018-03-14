@@ -5,7 +5,8 @@ var svg = d3.select("#map"),
 
 // Zoom guarro
 // Molaria algo rollo http://bl.ocks.org/sconnelley/9558967
-svg.call(d3.zoom().on("zoom", function () {
+// o https://bl.ocks.org/piwodlaiwo/c6e2478581d3932f99da781e9dade306
+svg.call(d3.zoom().scaleExtent([1, 10]).on("zoom", function () {
     svg.attr("transform", d3.event.transform)
 }))
 
