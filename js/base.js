@@ -112,8 +112,8 @@ dateSlider.noUiSlider.on('update', function( values, handle ) {
     loadData();
 });
 
-var ctx = document.getElementById("ageChart").getContext("2d");
-var ageChart = new Chart(ctx, {
+var ageCtx = document.getElementById("ageChart").getContext("2d");
+var ageChart = new Chart(ageCtx, {
     type: 'line',
     data: {
         datasets: [
@@ -223,6 +223,48 @@ var ageChart = new Chart(ctx, {
                 scaleLabel: {
                     display: true,
                     labelString: 'Edat'
+                }
+            }]
+        }
+    }
+});
+
+var messageCtx = document.getElementById("messageChart").getContext("2d");
+var messageChart = new Chart(messageCtx, {
+    type: 'horizontalBar',
+    data: {
+        labels: [
+            "No és un missatge de consulta",
+            "Col·legi retornat correctament",
+            "No s'ha trobat a la BBDD",
+            "DNI incorrecte",
+            "Codi postal incorrecte",
+            "Data incorrecta",
+        ],
+        datasets: [
+            {
+                label: '# de respostes',
+                data: [5592, 3091, 1178, 319, 33, 162],
+                backgroundColor: [
+                    'rgba(0, 0, 0, 0.1)',
+                    'rgba(40, 220, 40, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(0, 0, 0, 0.1)',
+                    'rgba(0, 0, 0, 0.1)',
+                    'rgba(0, 0, 0, 0.1)',
+                ]
+            }
+        ]
+    },
+    options: {
+        legend: {
+            display: false,
+        },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: '# de respostes'
                 }
             }]
         }
