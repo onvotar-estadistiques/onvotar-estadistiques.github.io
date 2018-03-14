@@ -11,7 +11,7 @@ svg.call(d3.zoom().on("zoom", function () {
 
 var projection = d3.geoMercator()
     .scale(5000)
-    .center([-52,73.5]);
+    .center([-54,73.4]);
 
 var path = d3.geoPath()
     .projection(projection);
@@ -108,7 +108,7 @@ function formatDate ( date ) {
 }
 
 dateSlider.noUiSlider.on('update', function( values, handle ) {
-    document.getElementById('timeslider-label').innerHTML = formatDate(new Date(+values[handle]));
+    document.getElementById('timeslider-label').innerHTML = formatDate(new Date(+values[handle]))+"h";
     loadData();
 });
 
